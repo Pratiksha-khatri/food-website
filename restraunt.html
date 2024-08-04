@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Google Fonts - Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="site.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bgimg {
+      background-color: #f4f4f4;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      min-height: 90vh;
+    }
+    .menu {
+      padding: 50px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Food Website</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#menu">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Header with image -->
+<header class=" text-center text-white">
+  <div class="d-flex align-items-center justify-content-center h-100">
+    <div class="w-100">
+      <h1 class="display-2 d-none d-sm-block border-bottom pb-2" style="color:black;">Food Fun</h1>
+      <h1 class="display-4 d-block d-sm-none border-bottom pb-2 " style="color:black;">Food Fun</h1>
+      <p class="lead mb-0"><a href="#menu" class="btn btn-primary btn-lg">Let me see the menu</a></p>
+    </div>
+  </div>
+  <div class="w-100 bg-dark text-white text-center py-2">
+    <span class="h3">Open from 10am to 12pm</span>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+    <img src="Untitled design.jpg" height='300' alt="food fun">
+  </div>
+</header>
+
+<!-- Menu Container -->
+<section id="menu" class="py-5">
+  <div class="container">
+    <h1 class="display-2 text-center mb-5">THE MENU</h1>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <a href="#" onclick="openMenu(event, 'Pizza');" class="btn btn-outline-danger btn-lg btn-block mb-3">Pizza</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#" onclick="openMenu(event, 'Pasta');" class="btn btn-outline-danger btn-lg btn-block mb-3">Pasta</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="#" onclick="openMenu(event, 'Starter');" class="btn btn-outline-danger btn-lg btn-block mb-3">Starter</a>
+      </div>
+    </div>
+
+    <div id="Pizza" class="menu">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Margherita</h3>
+            <p class="card-text">Rs. 700<br>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 25px;">Formaggio</h3>
+            <p class="card-text">Rs. 800<br>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 25px";>Chicken</h3>
+            <p class="card-text">Rs. 1200<br>Fresh tomatoes, mozzarella, chicken, onions</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 25px;">Meat Town</h3>
+            <p class="card-text">Rs. 1100<br>Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 25px;">Parma</h3>
+            <p class="card-text">Rs. 1300<br>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Pasta" class="menu" style="display:none;">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Lasagna</h3>
+            <p class="card-text">Rs. 400<br>Special sauce, mozzarella, parmesan, ground beef</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Ravioli</h3>
+            <p class="card-text">Rs. 300<br>Ravioli filled with cheese</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Spaghetti Classica</h3>
+            <p class="card-text">Rs. 500<br>Fresh tomatoes, onions, ground beef</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Seafood Pasta</h3>
+            <p class="card-text">Rs. 700<br>Salmon, shrimp, lobster, garlic</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Carbonara</h3>
+            <p class="card-text">Rs. 450<br>Creamy sauce, pancetta, parmesan, black pepper</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Starter" class="menu" style="display:none;">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Today's Soup</h3>
+            <p class="card-text">Rs. 300<br>Ask the waiter</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Bruschetta</h3>
+            <p class="card-text">Rs. 250<br>Bread with pesto, tomatoes, onion, garlic</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Garlic Bread</h3>
+            <p class="card-text">Rs. 200<br>Grilled ciabatta, garlic butter, onions</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Caprese Salad</h3>
+            <p class="card-text">Rs. 300<br>Fresh mozzarella, tomatoes, basil, balsamic glaze</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Caesar Salad</h3>
+            <p class="card-text">Rs. 350<br>Romaine lettuce, croutons, parmesan cheese, Caesar dressing</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 27px;">Spinach Dip</h3>
+            <p class="card-text">Rs. 150<br>Creamy spinach and artichoke dip, tortilla chips</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-5 text-dark" style="background-color: bisque;">
+    <div class="container">
+      <h1 class="display-2 text-center mb-5">About</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p>The Food Fun Restaurant is a fun place to hangout in the town. It has an amazing ambience. The food served here is top notch and made by highly qualified chefs under clean and higienic circumstances. We have been awarded the Certificate of Excellence by the Food Organization.</p>
+          <p><strong>Owner-</strong> Ms. Pratiksha</p>
+          <img src="prati.jpeg" class="img-fluid rounded-circle mb-3" style="width:100px; height: 100px;" alt="Owner">
+          <h4>Check out some glimpse of our restraunt!</h4>
+          <img src="interior.jpg" class="img-fluid rounded mb-3" style="width:50%; height: 300px;" alt="Restaurant">
+          <img src="people eating.jpg" class="img-fluid rounded mb-3" style="width:40%; height: 200px;" alt="Restaurant">
+        </div>
+        <div class="col-md-6">
+          <h3 class="mb-3">Opening Hours</h3>
+          <ul class="list-unstyled">
+            <li><strong>Monday</strong>10:00 am - 10:00 pm</li>
+            <li><strong>Tuesday</strong>10:00 am - 10:00 pm</li>
+            <li><strong>Wednesday</strong>10:00 am - 10:00 pm</li>
+            <li><strong>Thursday</strong>10:00 am - 10:00 pm</li>
+            <li><strong>Friday</strong>10:00 am - 11:00 pm</li>
+            <li><strong>Saturday</strong>10:00 am - 11:00 pm</li>
+            <li><strong>Sunday</strong>9:00 am - 11:00 pm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h1 class="display-2 text-center mb-5">Contact</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Find us at Sector-15 in Tilak Nagar or call us at 012345678</p>
+          <p><span class="badge badge-info">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+        </div>
+        <div class="col-md-6">
+          <form action="/action_page.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="How many people" required>
+            </div>
+            <div class="form-group">
+              <input type="datetime-local" class="form-control" placeholder="Date and time" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" placeholder="Message / Special requirements" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2024 Food Website. All rights reserved.</p>
+</footer>
+
+<!-- jQuery and Bootstrap Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("btn");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</body>
+</html>
